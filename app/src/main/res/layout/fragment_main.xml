@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/viewStatusBarMain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_15dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tvMessage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            android:padding="@dimen/dimen_5dp"
+            android:text="消息"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+            app:layout_constraintEnd_toStartOf="@+id/tvAppointSetting"
+            app:layout_constraintTop_toTopOf="@+id/tvTitle"/>
+
+        <ImageView
+            android:id="@+id/ivRedDit"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            android:src="@color/red"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/tvMessage"
+            app:layout_constraintStart_toEndOf="@id/tvMessage"
+            app:layout_constraintTop_toTopOf="@id/tvMessage"/>
+
+        <TextView
+            android:id="@+id/tvAppointSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            android:padding="@dimen/dimen_5dp"
+            android:text="预约设置"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvTitle"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="今日收款（元）"
+            android:textColor="#9aacc2"
+            app:layout_constraintBottom_toTopOf="@+id/tvTodayMoney"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvTodayMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvAllOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:text="交易共0笔"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/tvBindNum"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTodayMoney"/>
+
+        <TextView
+            android:id="@+id/tvBindNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:text="绑定共0人"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvAllOrder"
+            app:layout_constraintTop_toBottomOf="@+id/tvTodayMoney"/>
+
+        <View
+            android:id="@+id/vLine"
+            android:layout_width="wrap_content"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:background="#2a5b8f"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAllOrder"/>
+
+        <TextView
+            android:id="@+id/tvOrders"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="@dimen/dimen_5dp"
+            android:text="收款记录"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/hLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/hLine"/>
+
+        <View
+            android:id="@+id/hLine"
+            android:layout_width="1px"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/dimen_5dp"
+            android:background="#2a5b8f"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vLine"/>
+
+        <TextView
+            android:id="@+id/tvApply"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="@dimen/dimen_5dp"
+            android:text="提现"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/hLine"
+            app:layout_constraintTop_toTopOf="@+id/vLine"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.header.FalsifyHeader
+            android:id="@+id/classics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llNewOrders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_15dp"
+                            android:layout_marginTop="@dimen/dimen_15dp"
+                            android:layout_marginEnd="@dimen/dimen_2dp"
+                            android:layout_marginBottom="@dimen/dimen_15dp"
+                            android:text="新订单提醒"
+                            android:textSize="@dimen/dimen_18sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvNewOrderNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:background="@drawable/shape_stoke_num_45"
+                            android:paddingStart="@dimen/dimen_5dp"
+                            android:paddingEnd="@dimen/dimen_5dp"
+                            android:text="10"
+                            android:textColor="@color/colorD5"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_110dp"
+                        android:layout_gravity="center"
+                        android:clipChildren="false"
+                        android:overScrollMode="never"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llAppointOrders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_15sp"
+                            android:layout_marginTop="@dimen/dimen_15dp"
+                            android:layout_marginEnd="@dimen/dimen_2dp"
+                            android:layout_marginBottom="@dimen/dimen_15dp"
+                            android:text="预约提醒"
+                            android:textSize="@dimen/dimen_18sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvAppointNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:background="@drawable/shape_stoke_num_45"
+                            android:paddingStart="@dimen/dimen_5dp"
+                            android:paddingEnd="@dimen/dimen_5dp"
+                            android:text="10"
+                            android:textColor="@color/colorD5"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewPagerAppoint"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_110dp"
+                        android:layout_gravity="center"
+                        android:clipChildren="false"
+                        android:overScrollMode="never"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_15sp"
+                    android:text="必备工具"
+                    android:textSize="@dimen/dimen_18sp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/tvProjects"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/main_charpenter_sel"
+                        android:drawablePadding="@dimen/dimen_5dp"
+                        android:text="项目管理"
+                        android:textSize="@dimen/dimen_11sp"/>
+
+                    <TextView
+                        android:id="@+id/tvTeach"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/main_teach"
+                        android:drawablePadding="@dimen/dimen_5dp"
+                        android:text="技师管理"
+                        android:textSize="@dimen/dimen_11sp"/>
+
+                    <TextView
+                        android:id="@+id/tvVip"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/main_vip"
+                        android:drawablePadding="@dimen/dimen_5dp"
+                        android:text="会员中心"
+                        android:textSize="@dimen/dimen_11sp"/>
+
+                    <TextView
+                        android:id="@+id/tvMoney"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/main_money"
+                        android:drawablePadding="@dimen/dimen_5dp"
+                        android:text="平台奖金"
+                        android:textSize="@dimen/dimen_11sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llNot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:layout_marginBottom="@dimen/dimen_15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/main_half"
+                        android:drawablePadding="@dimen/dimen_5dp"
+                        android:text="优惠管理"
+                        android:textSize="@dimen/dimen_11sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/main_active"
+                        android:drawablePadding="@dimen/dimen_5dp"
+                        android:text="活动报名"
+                        android:textSize="@dimen/dimen_11sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/main_user"
+                        android:drawablePadding="@dimen/dimen_5dp"
+                        android:text="客户档案"
+                        android:textSize="@dimen/dimen_11sp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/main_content"
+                        android:drawablePadding="@dimen/dimen_5dp"
+                        android:text="内容管理"
+                        android:textSize="@dimen/dimen_11sp"/>
+                </LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_15dp"
+                    android:layout_marginEnd="@dimen/dimen_15dp"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    app:cardCornerRadius="@dimen/dimen_10dp"
+                    app:cardElevation="0.1dp">
+
+                    <cn.bingoogolapple.bgabanner.BGABanner
+                        android:id="@+id/banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_130dp"
+                        app:banner_isNumberIndicator="false"
+                        app:banner_numberIndicatorBackground="@color/trans"
+                        app:banner_pointAutoPlayAble="true"
+                        app:banner_pointContainerBackground="@color/trans"/>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <com.scwang.smartrefresh.layout.footer.FalsifyFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>

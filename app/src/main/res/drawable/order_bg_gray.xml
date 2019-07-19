@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--轮廓线-->
+    <stroke android:color="#807F7F" android:width="2px"></stroke>
+    <!-- 填充的颜色 -->
+    <solid android:color="#807F7F" />
+    <!-- 设置按钮的四个角为弧形 -->
+    <corners android:radius="10px" />
+</shape>

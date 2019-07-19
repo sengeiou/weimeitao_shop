@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_bank"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/im_bank"
+        android:layout_width="@dimen/dimen_50dp"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_marginStart="@dimen/dimen_15dp"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:layout_marginBottom="@dimen/dimen_15dp"
+        android:src="@mipmap/test_bank"/>
+
+    <TextView
+        android:id="@+id/tv_bank_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/im_bank"
+        android:layout_marginStart="@dimen/dimen_15dp"
+        android:layout_toEndOf="@+id/im_bank"
+        android:text="@string/app_name"
+        android:textSize="@dimen/dimen_15sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_bank_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/im_bank"
+        android:layout_marginStart="@dimen/dimen_15dp"
+        android:layout_toEndOf="@+id/im_bank"
+        android:text="0000********0000"
+        android:textSize="@dimen/dimen_14sp"/>
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorWmDivider"/>
+</RelativeLayout>

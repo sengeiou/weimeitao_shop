@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorEEE"
+    android:orientation="vertical">
+
+    <!--选卡-->
+    <RelativeLayout
+        android:id="@+id/rl_bank"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/im_bank"
+            android:layout_width="@dimen/dimen_50dp"
+            android:layout_height="@dimen/dimen_50dp"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:layout_marginBottom="@dimen/dimen_15dp"
+            android:src="@mipmap/test_bank"/>
+
+        <TextView
+            android:id="@+id/tv_bank_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/im_bank"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_toEndOf="@+id/im_bank"
+            android:text="@string/app_name"
+            android:textSize="@dimen/dimen_15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_bank_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/im_bank"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_toEndOf="@+id/im_bank"
+            android:text="0000****0000"
+            android:textSize="@dimen/dimen_14sp"/>
+
+
+        <TextView
+            android:id="@+id/tvNullCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/im_bank"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dimen_15dp"
+            android:text="请先前往添加银行卡"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            android:src="@drawable/right_arrow"/>
+    </RelativeLayout>
+
+    <!-- 提现金额-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:text="提现金额"
+            android:textColor="#222222"
+            android:textSize="@dimen/dimen_14sp"/>
+
+        <TextView
+            android:id="@+id/tv_put_money"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text1"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:gravity="left"
+            android:text="0.00"
+            android:textColor="#222222"
+            android:textSize="@dimen/dimen_30sp"/>
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_put_money"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:text="不可提现金额:"
+            android:textColor="#999999"
+            android:textSize="@dimen/dimen_14sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:layout_below="@+id/tv_money"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:background="@color/line"/>
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_put_money"
+            android:layout_alignTop="@+id/text2"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:layout_toEndOf="@+id/text2"
+            android:text="0.00"
+            android:textColor="#999999"
+            android:textSize="@dimen/dimen_14sp"/>
+    </RelativeLayout>
+
+    <!--提现按钮-->
+    <TextView
+        android:id="@+id/btn_get_money"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_margin="@dimen/dimen_20dp"
+        android:background="@drawable/shape_5_theme"
+        android:text="预计两小时到账，确认提现"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

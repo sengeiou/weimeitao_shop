@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">唯美淘商家版</string>
+    <string name="password_tip">密码8~20位，至少包含字母/数字/符号两种组合</string>
+    <string name="tip_need">
+          作为入驻商户承诺维护唯美淘内容的客观、真实性，不得进行违反诚信的任务行为（包括但不限于商家及利益相关方给自己在线商户提交好评、通过收买或者诱导（如送项目、送礼、折扣等）用户提交好评，使用虚假账号提交好评、利用违规手段进行虚假点击等影响点评真实性、客观性的行为及其他违反诚信公约的行为），否则平台有权依据《商户诚信公约及管理办法》对入驻商户采取排序降权、公开警告等处罚措施。</string>
+    <string name="tip_need1">①预约金是在唯美淘预约服务项目时预先支付的定金（总价的20%），剩余的服务项目尾款在享受完服务后支付，即：预约金+项目尾款=唯美淘价；
+\n②预约订单在预约时间开始前可免费取消；
+\n③等待时长：预约时间开始，如用户因其他原因，未及时到店享受服务，商家免费等待120分钟，超过120分钟商家有权取消订单，且预约金不退还；
+\n④用户预约订单，支付预约金后10分钟内商家未接单，系统自动取消订单
+    </string>
+    <string name="feedback">感谢您的反馈，请详细描述，让我们更好的了解问题，您也可以联系邮箱：feedback@weimeitao.com，并详细描述问题。 </string>
+    <string name="apply_tip">即：本月十号之前提现，十号当日打款，十号之后提现\n&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;次月十号打款如遇法定节假日顺延至工作日打款</string>
+    <string name="customactivityoncrash_error_activity_error_occurred_explanation">发生了意外错误。\n抱歉给您带来不便。</string>
+    <string name="customactivityoncrash_error_activity_restart_app">重新启动应用程序</string>
+    <string name="customactivityoncrash_error_activity_close_app">关闭应用程序</string>
+    <string name="customactivityoncrash_error_activity_error_details">错误详细信息</string>
+    <string name="customactivityoncrash_error_activity_error_details_title">错误详细信息</string>
+    <string name="customactivityoncrash_error_activity_error_details_close">关闭</string>
+    <string name="customactivityoncrash_error_activity_error_details_copy">复制到剪贴板</string>
+    <string name="customactivityoncrash_error_activity_error_details_copied">复制到剪贴板</string>
+    <string name="customactivityoncrash_error_activity_error_details_clipboard_label">错误信息</string>
+    <string name="bank_info">请添加店面提现银行卡\n为保障账户资金安全，只能绑定认证商户本人的银行卡</string>
+</resources>

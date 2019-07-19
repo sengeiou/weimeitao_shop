@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:id="@+id/rl_item">
+
+    <!--项目图片-->
+    <ImageView
+        android:id="@+id/im_photo"
+        android:layout_width="@dimen/dimen_70dp"
+        android:layout_height="@dimen/dimen_70dp"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:src="@drawable/wmt_default"
+        android:scaleType="centerCrop"/>
+
+    <!--项目名称-->
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/im_photo"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginEnd="@dimen/dimen_50dp"
+        android:layout_toEndOf="@+id/im_photo"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#222222"
+        android:textSize="@dimen/dimen_14sp" />
+
+    <!--到店时间-->
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_3dp"
+        android:layout_toEndOf="@+id/im_photo"
+        android:text="到店时间："
+        android:textColor="#999999"
+        android:textSize="@dimen/dimen_14sp" />
+
+    <!--服务技师-->
+    <TextView
+        android:id="@+id/teacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_3dp"
+        android:layout_toEndOf="@+id/im_photo"
+        android:text="服务技师："
+        android:textColor="#999999"
+        android:textSize="@dimen/dimen_14sp" />
+
+    <!--时间显示-->
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="@dimen/dimen_3dp"
+        android:layout_toEndOf="@+id/time"
+        android:textColor="#222222"
+        android:textSize="@dimen/dimen_14sp" />
+
+    <!--技师显示-->
+    <TextView
+        android:id="@+id/tv_teacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="@dimen/dimen_3dp"
+        android:layout_toEndOf="@+id/time"
+        android:textColor="#222222"
+        android:textSize="@dimen/dimen_14sp" />
+
+    <!--功能按钮-->
+
+    <!--新订单-->
+    <RelativeLayout
+        android:id="@+id/rl_new"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45dp"
+        android:layout_below="@+id/im_photo"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/order_bg_agree"
+            android:paddingLeft="@dimen/dimen_10dp"
+            android:paddingTop="@dimen/dimen_3dp"
+            android:paddingRight="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_3dp"
+            android:text="接受预约"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tv_repulse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:layout_toStartOf="@+id/tv_agree"
+            android:background="@drawable/order_bg_repulse"
+            android:paddingLeft="@dimen/dimen_10dp"
+            android:paddingTop="@dimen/dimen_3dp"
+            android:paddingRight="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_3dp"
+            android:text="拒绝预约"
+            android:textColor="#3F51B5" />
+
+    </RelativeLayout>
+
+    <!--代付尾款-->
+    <RelativeLayout
+        android:id="@+id/rl_wait"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45dp"
+        android:layout_below="@+id/im_photo"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/order_bg_repulse"
+            android:paddingLeft="@dimen/dimen_10dp"
+            android:paddingTop="@dimen/dimen_3dp"
+            android:paddingRight="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_3dp"
+            android:text="更改尾款"
+            android:textColor="#3F51B5" />
+
+        <TextView
+            android:id="@+id/tv_time_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:layout_toStartOf="@+id/tv_change"
+            android:background="@drawable/order_bg_cancel"
+            android:paddingLeft="@dimen/dimen_10dp"
+            android:paddingTop="@dimen/dimen_3dp"
+            android:paddingRight="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_3dp"
+            android:text="用户超时，取消预约"
+            android:textColor="#999999" />
+
+    </RelativeLayout>
+
+    <!--取消-->
+    <RelativeLayout
+        android:id="@+id/rl_center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45dp"
+        android:layout_below="@+id/im_photo"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:visibility="visible">
+
+        <TextView
+            android:text=""
+            android:id="@+id/tv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_90dp"
+            android:textSize="@dimen/dimen_14sp" />
+    </RelativeLayout>
+
+    <!--退款/售后-->
+    <RelativeLayout
+        android:id="@+id/rl_after_sale"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45dp"
+        android:layout_below="@+id/im_photo"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_sale_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/order_bg_repulse"
+            android:paddingLeft="@dimen/dimen_10dp"
+            android:paddingTop="@dimen/dimen_3dp"
+            android:paddingRight="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_3dp"
+            android:text="同意退款"
+            android:textColor="#3F51B5" />
+
+        <TextView
+            android:id="@+id/tv_sale_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:layout_toStartOf="@+id/tv_sale_ok"
+            android:background="@drawable/order_bg_repulse"
+            android:paddingLeft="@dimen/dimen_10dp"
+            android:paddingTop="@dimen/dimen_3dp"
+            android:paddingRight="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_3dp"
+            android:text="拒绝退款"
+            android:textColor="#3F51B5" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_2dp"
+        android:layout_below="@+id/im_photo"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="@dimen/dimen_52dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:background="@color/line" />
+
+</RelativeLayout>

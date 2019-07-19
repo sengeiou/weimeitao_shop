@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            android:divider="@drawable/shape_divider"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvTipSelType"
+                    android:layout_width="@dimen/dimen_80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="预约项目："/>
+
+                <TextView
+                    android:id="@+id/tvSelType"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:background="@color/white"
+                    android:drawableEnd="@drawable/right_arrow"
+                    android:gravity="center_vertical"
+                    android:hint="请选择项目分类"
+                    android:textSize="@dimen/dimen_13sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvTipName"
+                    android:layout_width="@dimen/dimen_80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="预约名称："/>
+
+                <EditText
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:hint="请输入项目名称"
+                    android:inputType="text"
+                    android:textColorHint="@color/colorWmDivider"
+                    android:textSize="@dimen/dimen_13sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/flBannerPics"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_110dp"
+            android:layout_margin="@dimen/dimen_15dp"
+            android:background="@color/colorD5">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dimen_15dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/camera"
+                android:tint="@color/color999"/>
+
+            <TextView
+                android:id="@+id/tvBannerUploadTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:text="点击上传头图，横版效果更好，请勿上传水印图"
+                android:textColor="@color/white"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvTipParameters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_15dp"
+            android:text="项目参数"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            android:divider="@drawable/shape_divider"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvTipPlace"
+                    android:layout_width="@dimen/dimen_80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="部位："/>
+
+                <TextView
+                    android:id="@+id/tvPlace"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:background="@color/white"
+                    android:drawableEnd="@drawable/right_arrow"
+                    android:gravity="center_vertical"
+                    android:hint="项目针对身体部位"
+                    android:textSize="@dimen/dimen_13sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvTipEffect"
+                    android:layout_width="@dimen/dimen_80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="功效："/>
+
+                <EditText
+                    android:id="@+id/tvEffect"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:hint="请您针对该项目的功效进行描述"
+                    android:inputType="text"
+                    android:textColorHint="@color/colorWmDivider"
+                    android:textSize="@dimen/dimen_13sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvTipUse"
+                    android:layout_width="@dimen/dimen_80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="使用产品："/>
+
+                <EditText
+                    android:id="@+id/tvUse"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:hint="请您针对该项目的使用产品进行描述"
+                    android:inputType="text"
+                    android:textColorHint="@color/colorWmDivider"
+                    android:textSize="@dimen/dimen_13sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvTinIns"
+                    android:layout_width="@dimen/dimen_80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="配合仪器："/>
+
+                <EditText
+                    android:id="@+id/tvIns"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:hint="请您针对该项目的使用仪器进行描述，没有填‘无’"
+                    android:inputType="text"
+                    android:textColorHint="@color/colorWmDivider"
+                    android:textSize="@dimen/dimen_11sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvTinProgress"
+                    android:layout_width="@dimen/dimen_80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="服务流程："/>
+
+                <EditText
+                    android:id="@+id/tvProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:hint="请您针对该项目流程进行描述"
+                    android:inputType="text"
+                    android:textColorHint="@color/colorWmDivider"
+                    android:textSize="@dimen/dimen_13sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvTinServer"
+                    android:layout_width="@dimen/dimen_120dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="是否有增值服务："/>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbHave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dimen_20dp"
+                        android:checked="true"
+                        android:text="是"/>
+
+                    <RadioButton
+                        android:id="@+id/rbNone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="否"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llHasGone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvTinContent"
+                    android:layout_width="@dimen/dimen_100dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="增值服务内容:"/>
+
+                <EditText
+                    android:id="@+id/tvServerContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:hint="请填写增值内容"
+                    android:inputType="text"
+                    android:textColorHint="@color/colorWmDivider"
+                    android:textSize="@dimen/dimen_13sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTipInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginBottom="@dimen/dimen_15dp"
+            android:text="项目信息"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            android:divider="@drawable/shape_divider"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvTipOld"
+                    android:layout_width="@dimen/dimen_120dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="门店价(市场)：￥"/>
+
+                <EditText
+                    android:id="@+id/tvOld"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:hint="门店售价"
+                    android:inputType="number"
+                    android:textColorHint="@color/colorWmDivider"
+                    android:textSize="@dimen/dimen_13sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvTipNew"
+                    android:layout_width="@dimen/dimen_120dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="平台价(售价)：￥"/>
+
+                <EditText
+                    android:id="@+id/tvNew"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:hint="平台价不得高于门店价"
+                    android:inputType="numberDecimal"
+                    android:textColorHint="@color/colorWmDivider"
+                    android:textSize="@dimen/dimen_13sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvFixPrice"
+                    android:layout_width="@dimen/dimen_120dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="结算价：￥"/>
+
+                <EditText
+                    android:id="@+id/tvRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:background="@color/white"
+                    android:enabled="false"
+                    android:gravity="center_vertical"
+                    android:hint="费率"
+                    android:inputType="number"
+                    android:textColor="@color/colorBlackGold"
+                    android:textColorHint="@color/colorWmDivider"
+                    android:textSize="@dimen/dimen_13sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/flInfoPics"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_110dp"
+            android:layout_margin="@dimen/dimen_15dp"
+            android:background="@color/colorD5">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dimen_15dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/camera"
+                android:tint="@color/color999"/>
+
+            <TextView
+                android:id="@+id/tvInfoPics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:text="点击上传项目详情图，横版效果更好，请勿上传水印图"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_12sp"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvTipNeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_15dp"
+            android:text="预约须知"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvTextNeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_25dp"
+            android:layout_marginEnd="@dimen/dimen_25dp"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="@dimen/dimen_2dp"
+            android:text="@string/tip_need1"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50dp"
+            android:layout_marginStart="@dimen/dimen_70dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginEnd="@dimen/dimen_70dp"
+            android:layout_marginBottom="@dimen/dimen_30dp"
+            android:background="@drawable/shape_5_theme"
+            android:text="提交"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

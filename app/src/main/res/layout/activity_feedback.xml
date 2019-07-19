@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/dimen_15dp"
+    android:paddingEnd="@dimen/dimen_15dp">
+
+    <EditText
+        android:id="@+id/editContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_25dp"
+        android:paddingStart="@dimen/dimen_5dp"
+        android:background="@color/white"
+        android:gravity="center_vertical|top"
+        android:hint="@string/feedback"
+        android:lineSpacingExtra="@dimen/dimen_3dp"
+        android:textColorHint="@color/colorWmDivider"
+        android:textSize="@dimen/dimen_14sp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <ImageView
+        android:id="@+id/ivAddPic"
+        android:layout_width="@dimen/dimen_70dp"
+        android:layout_height="@dimen/dimen_70dp"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:background="@color/colorWmDivider"
+        android:padding="@dimen/dimen_20dp"
+        android:src="@drawable/pic_add"
+        android:tint="@color/white"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:background="@color/colorWmDivider"/>
+
+    <EditText
+        android:id="@+id/editNum"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:background="@color/white"
+        android:hint="微信，QQ，邮件或联系方式"
+        android:inputType="text"
+        android:lines="1"
+        android:textColorHint="@color/colorWmDivider"
+        android:textSize="@dimen/dimen_13sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorWmDivider"/>
+
+    <TextView
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:text="您的联系方式有助于我们沟通和改善问题，只有工作人员可见"
+        android:textColor="@color/colorWmDivider"/>
+</LinearLayout>

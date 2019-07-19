@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_bank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_1dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/im_bank"
+            android:layout_width="@dimen/dimen_50dp"
+            android:layout_height="@dimen/dimen_50dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:layout_marginBottom="@dimen/dimen_15dp"
+            android:src="@mipmap/test_bank" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/im_bank"
+            android:layout_marginLeft="@dimen/dimen_15dp"
+            android:layout_toRightOf="@+id/im_bank"
+            android:text="余额提现"
+            android:textSize="@dimen/dimen_14dp"
+            android:textStyle="bold"
+            android:textColor="#222222"/>
+
+        <TextView
+            android:id="@+id/tv_bank_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginLeft="@dimen/dimen_15dp"
+            android:layout_toRightOf="@+id/im_bank"
+            android:text="尾号1234 储蓄卡"
+            android:textSize="@dimen/dimen_12dp"
+            android:textColor="#222222"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_bank_num"
+            android:layout_marginLeft="@dimen/dimen_15dp"
+            android:layout_toRightOf="@+id/im_bank"
+            android:text="2019年3月28日 20:35:57"
+            android:textColor="#999999"
+            android:textSize="@dimen/dimen_12dp" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/im_bank"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_16dp"
+            android:text="0.00"
+            android:textColor="#222222"
+            android:textSize="@dimen/dimen_15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_money"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:layout_marginRight="@dimen/dimen_16dp"
+            android:text="申请中"
+            android:textColor="#222222"
+            android:textSize="@dimen/dimen_12dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:background="@color/line"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_below="@+id/im_bank"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

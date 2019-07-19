@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:divider="@drawable/shape_divider"
+    android:dividerPadding="@dimen/dimen_15dp"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <top.jplayer.baseprolibrary.widgets.polygon.PolygonImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="@dimen/dimen_60dp"
+            android:layout_height="@dimen/dimen_60dp"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:src="@drawable/wmt_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:poly_vertices="0"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:text="@string/app_name"
+            android:textSize="@dimen/dimen_18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivAvatar"
+            app:layout_constraintTop_toTopOf="@+id/ivAvatar"/>
+
+        <TextView
+            android:id="@+id/tvSubTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_50dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="@string/app_name"
+            android:textSize="@dimen/dimen_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"/>
+
+        <LinearLayout
+            android:id="@+id/llPic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_65dp"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/ivAvatar">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:drawableEnd="@drawable/right_arrow"
+                android:gravity="center_vertical"
+                android:text="设置门店主图"
+                android:textSize="@dimen/dimen_16sp"/>
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/llVideo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_65dp"
+        android:layout_marginStart="@dimen/dimen_15dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/ivAvatar">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            android:drawableEnd="@drawable/right_arrow"
+            android:gravity="center_vertical"
+            android:text="设置门店视频"
+            android:textSize="@dimen/dimen_16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llVR"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_65dp"
+        android:layout_marginStart="@dimen/dimen_15dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/ivAvatar">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            android:drawableEnd="@drawable/right_arrow"
+            android:gravity="center_vertical"
+            android:text="设置门店VR展示"
+            android:textSize="@dimen/dimen_16sp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"/>
+</LinearLayout>

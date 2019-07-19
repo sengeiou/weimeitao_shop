@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/viewStatusBarAppointment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/top"
+            layout="@layout/top" />
+
+        <!--列表-->
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/smart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_put"
+            android:layout_below="@+id/top">
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlClassicsSpinnerStyle="FixedBehind"
+                app:srlDrawableArrowSize="@dimen/dimen_20dp"
+                app:srlDrawableMarginRight="@dimen/dimen_20dp"
+                app:srlDrawableProgressSize="@dimen/dimen_20dp"
+                app:srlEnableLastTime="true"
+                app:srlFinishDuration="100"
+                app:srlTextSizeTime="@dimen/dimen_11dp"
+                app:srlTextSizeTitle="@dimen/dimen_12dp"
+                app:srlTextTimeMarginTop="@dimen/dimen_2dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!--头部信息-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:layout_marginTop="@dimen/dimen_15dp"
+                                android:text="每月10号为打款日"
+                                android:textColor="#222222"
+                                android:textSize="@dimen/dimen_12dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:layout_marginRight="@dimen/dimen_10dp"
+                                android:text="即：本月十号之前提现，十号当日打款，十号之后提现，次月十号打款"
+                                android:textColor="#222222"
+                                android:textSize="@dimen/dimen_10dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_35dp"
+                                android:layout_marginRight="@dimen/dimen_10dp"
+                                android:text="如遇法定节假日顺延至工作日打款"
+                                android:textColor="#222222"
+                                android:textSize="@dimen/dimen_10dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen_1dp"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:layout_marginTop="@dimen/dimen_15dp"
+                                android:layout_marginRight="@dimen/dimen_10dp" />
+                        </LinearLayout>
+
+                        <!--全选/总金额-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_choose_all"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:text="全选"
+                                android:textColor="#222222"
+                                android:textSize="@dimen/dimen_15dp" />
+
+                            <TextView
+                                android:id="@+id/tv_all_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="@dimen/dimen_15dp"
+                                android:layout_marginRight="@dimen/dimen_10dp"
+                                android:layout_marginBottom="@dimen/dimen_15dp"
+                                android:text="0"
+                                android:textColor="#222222"
+                                android:textSize="@dimen/dimen_18dp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_1dp"
+                            android:layout_marginLeft="@dimen/dimen_10dp"
+                            android:layout_marginRight="@dimen/dimen_10dp"
+                            android:background="@color/line" />
+
+                        <!--数据list-->
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/date_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                        <LinearLayout
+                            android:id="@+id/ll_no_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginTop="80dp">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center_horizontal|center_vertical"
+                                android:src="@drawable/ic_no_data" />
+
+                            <TextView
+                                android:id="@id/empty_retry_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_gravity="center_horizontal|center_vertical"
+                                android:text="@string/empty_view_hint"
+                                android:textColor="@color/colorBlackGold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </ScrollView>
+
+            </RelativeLayout>
+
+            <com.scwang.smartrefresh.layout.footer.FalsifyFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <TextView
+            android:id="@+id/btn_put"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_15dp"
+            android:background="@drawable/order_bg_agree"
+            android:text="手动提现"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/dimen_13dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+    <!--&lt;!&ndash;提现页面布局&ndash;&gt;--><!--<LinearLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--android:background="@color/line"--><!--android:orientation="vertical">-->
+
+    <!--<RelativeLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:background="@color/white">-->
+
+    <!--<TextView--><!--android:id="@+id/text1"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_marginLeft="@dimen/dimen_10dp"--><!--android:layout_marginTop="@dimen/dimen_20dp"--><!--android:text="可提现金额"--><!--android:textColor="#222222"--><!--android:textSize="@dimen/dimen_14dp" />-->
+
+    <!--<TextView--><!--android:id="@+id/tv_ok_money"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_below="@+id/text1"--><!--android:layout_marginLeft="@dimen/dimen_10dp"--><!--android:layout_marginTop="@dimen/dimen_15dp"--><!--android:text="154531.21元"--><!--android:textColor="#222222"--><!--android:textSize="@dimen/dimen_30dp"--><!--android:textStyle="bold" />-->
+
+    <!--<TextView--><!--android:id="@+id/text2"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_below="@+id/tv_ok_money"--><!--android:layout_marginLeft="@dimen/dimen_10dp"--><!--android:layout_marginTop="@dimen/dimen_20dp"--><!--android:layout_marginBottom="10dp"--><!--android:text="不可提现金额:"--><!--android:textColor="#666666"--><!--android:textSize="@dimen/dimen_14dp" />-->
+
+    <!--<TextView--><!--android:id="@+id/tv_no_money"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_below="@+id/tv_ok_money"--><!--android:layout_alignTop="@+id/text2"--><!--android:layout_marginLeft="10dp"--><!--android:layout_marginBottom="10dp"--><!--android:layout_toRightOf="@+id/text2"--><!--android:text="100000"--><!--android:textColor="#666666"--><!--android:textSize="@dimen/dimen_14dp"--><!--android:textStyle="bold" />--><!--</RelativeLayout>-->
+
+    <!--<TextView--><!--android:id="@+id/btn_put"--><!--android:layout_width="match_parent"--><!--android:layout_height="@dimen/dimen_35dp"--><!--android:layout_marginLeft="10dp"--><!--android:layout_marginTop="@dimen/dimen_50dp"--><!--android:layout_marginRight="10dp"--><!--android:background="@drawable/order_bg_agree"--><!--android:text="手动提现"--><!--android:textColor="@color/white"--><!--android:textSize="@dimen/dimen_12dp" />-->
+
+    <!--<TextView--><!--android:id="@+id/text3"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_gravity="center_horizontal"--><!--android:layout_marginTop="20dp"--><!--android:text="每月10号为打款日"--><!--android:textColor="#222222"--><!--android:textSize="@dimen/dimen_14dp"--><!--android:textStyle="bold" />--><!--<TextView--><!--android:id="@+id/text4"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_gravity="center_horizontal"--><!--android:layout_marginTop="@dimen/dimen_5dp"--><!--android:layout_marginLeft="@dimen/dimen_30dp"--><!--android:layout_marginRight="@dimen/dimen_30dp"--><!--android:layout_marginBottom="@dimen/dimen_20dp"--><!--android:gravity="left"--><!--android:text="即：本月十号之前提现，十号当日打款，十号之后提现，次月十号打款，如法定节假日顺延"--><!--android:textColor="#222222"--><!--android:textSize="@dimen/dimen_12dp" />-->
+
+
+    <!--</LinearLayout>-->

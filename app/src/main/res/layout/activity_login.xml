@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <View
+        android:id="@+id/viewToolBar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivLoginBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:padding="@dimen/dimen_10dp"
+        android:src="@drawable/black_left_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewToolBar"/>
+
+    <TextView
+        android:id="@+id/tvTitleTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_15dp"
+        android:layout_marginTop="@dimen/dimen_60dp"
+        android:text="账号密码登录"
+        android:textSize="@dimen/dimen_18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewToolBar"/>
+
+    <TextView
+        android:id="@+id/tvSubTitleTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:gravity="center_vertical"
+        android:text="请输入您绑定的手机号"
+        android:textSize="@dimen/dimen_12sp"
+        app:layout_constraintStart_toStartOf="@id/tvTitleTip"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleTip"/>
+
+    <EditText
+        android:inputType="text"
+        android:id="@+id/editView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_marginTop="@dimen/dimen_80dp"
+        android:layout_marginEnd="@dimen/dimen_20dp"
+        android:background="@color/white"
+        android:hint="请输入手机号码"
+        android:lines="1"
+        android:textColorHint="@color/color999"
+        android:textSize="@dimen/dimen_13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvTitleTip"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubTitleTip"/>
+
+    <ImageButton
+        android:id="@+id/ivShow"
+        android:layout_width="@dimen/dimen_50dp"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dimen_15dp"
+        android:background="@null"
+        android:src="@drawable/selector_password"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editView"/>
+
+    <TextView
+        android:id="@+id/selectCity"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_marginTop="@dimen/dimen_80dp"
+        android:layout_marginEnd="@dimen/dimen_20dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:hint="选择您店铺所在城市"
+        android:textSize="@dimen/dimen_13sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvTitleTip"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubTitleTip"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_1dp"
+        android:background="@color/colorD5"
+        app:layout_constraintEnd_toEndOf="@+id/editView"
+        app:layout_constraintStart_toStartOf="@+id/editView"
+        app:layout_constraintTop_toBottomOf="@+id/editView"/>
+
+    <TextView
+        android:id="@+id/tvSmsCode"
+        android:layout_width="@dimen/dimen_80dp"
+        android:layout_height="@dimen/dimen_40dp"
+        android:background="@drawable/shape_white_unpress"
+        android:text="重新获取"
+        android:textColor="@color/color999"
+        android:textSize="@dimen/dimen_13sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/editView"
+        app:layout_constraintEnd_toEndOf="@+id/editView"
+        app:layout_constraintTop_toTopOf="@+id/editView"/>
+
+    <TextView
+        android:id="@+id/tvForgetPwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_3dp"
+        android:padding="@dimen/dimen_5dp"
+        android:text="忘记密码"
+        android:textColor="@color/color999"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/editView"
+        app:layout_constraintTop_toBottomOf="@+id/editView"/>
+
+    <TextView
+        android:id="@+id/tvPasswordTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:text="@string/password_tip"
+        android:textSize="@dimen/dimen_11sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/editView"
+        app:layout_constraintTop_toBottomOf="@+id/editView"/>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_marginStart="@dimen/dimen_50dp"
+        android:layout_marginTop="@dimen/dimen_80dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/shape_5_theme"
+        android:text="下一步"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editView"/>
+
+    <Button
+        android:id="@+id/tvToRegister"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_marginStart="@dimen/dimen_50dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/shape_stoke_theme"
+        android:text="申请入驻"
+        android:textColor="@color/colorPrimary"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNext"/>
+
+    <LinearLayout
+        android:id="@+id/llShopTip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_30dp"
+        android:layout_marginEnd="@dimen/dimen_40dp"
+        android:layout_marginBottom="@dimen/dimen_30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvRegisterT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册账号"/>
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:layout_weight="1"
+            android:background="@color/colorD5"/>
+
+        <TextView
+            android:id="@+id/tvDoorT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择门店"
+            android:textColor="@color/color999"/>
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:layout_weight="1"
+            android:background="@color/colorD5"/>
+
+        <TextView
+            android:id="@+id/tvPushT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交资料"
+            android:textColor="@color/color999"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

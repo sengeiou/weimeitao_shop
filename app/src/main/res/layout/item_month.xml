@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <!--月份/总额 item-->
+    <RelativeLayout
+        android:id="@+id/rl_month"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/line">
+
+        <!--月份-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/month_item_bg"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:paddingLeft="@dimen/dimen_10dp"
+            android:paddingTop="@dimen/dimen_5dp"
+            android:paddingRight="@dimen/dimen_10dp"
+            android:paddingBottom="@dimen/dimen_5dp">
+
+            <TextView
+                android:id="@+id/tv_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="几月"
+                android:textColor="#222222"
+                android:textSize="@dimen/dimen_13dp" />
+
+            <ImageView
+                android:id="@+id/ivArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dimen_5dp"
+                android:src="@mipmap/test_down"
+                android:tint="#222222" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_all_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_15dp"
+            android:text="提现"
+            android:textColor="#666666"
+            android:textSize="@dimen/dimen_13dp" />
+
+
+    </RelativeLayout>
+
+    <!--条目recycle-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_month"
+        android:background="@color/white">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
